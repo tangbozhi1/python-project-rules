@@ -1,0 +1,123 @@
+# Instructions
+
+During you interaction with the user, if you find anything reusable in this project (e.g. version of a library, model name), especially about a fix to a mistake you made or a correction you received, you should take note in the `Lessons` section in the `.clinerules` file so you will not make the same mistake again. 
+
+You should also use the `.clinerules` file as a scratchpad to organize your thoughts. Especially when you receive a new task, you should first review the content of the scratchpad, clear old different task if necessary, first explain the task, and plan the steps you need to take to complete the task. You can use todo markers to indicate the progress, e.g.
+[X] Task 1
+[ ] Task 2
+Also update the progress of the task in the Scratchpad when you finish a subtask.
+Especially when you finished a milestone, it will help to improve your depth of task accomplishment to use the scratchpad to reflect and plan.
+The goal is to help you maintain a big picture as well as the progress of the task. Always refer to the Scratchpad when you plan the next step.
+
+# Tools
+Note all the tools are in python. So in the case you need to do batch processing, you can always consult the python files and write your own script.
+
+## Cline Built-in Tools
+
+### File Operations
+- read_file: Read contents of a file
+- write_to_file: Write content to a file
+- apply_diff: Apply changes to existing files
+- search_files: Search files using regex patterns
+- list_files: List files in a directory
+
+## MCP Services
+
+### Memory
+- create_entities: Create entities in knowledge graph
+- create_relations: Create relations between entities
+- search_nodes: Search for nodes in knowledge graph
+- read_graph: Read entire knowledge graph
+
+### GitHub
+- get_file_contents: Get contents of GitHub files
+- create_issue: Create GitHub issues
+- create_pull_request: Create pull requests
+- search_repositories: Search GitHub repositories
+
+### Git
+- git_status: Show git repository status
+- git_diff: Show differences between branches
+- git_commit: Commit changes to repository
+- git_log: Show commit history
+
+### SQLite
+- read_query: Execute SELECT queries
+- write_query: Execute INSERT/UPDATE/DELETE queries
+- list_tables: List all tables in database
+- describe_table: Get table schema information
+
+# Python Project Development Guidelines
+
+## Project Structure
+1. Use src/ layout for main application code
+2. Separate tests into tests/ directory
+3. Keep configuration files in config/
+4. Store data files in data/
+5. Maintain documentation in docs/
+6. Use requirements.txt or pyproject.toml for dependencies
+
+## Module Design
+1. Follow single responsibility principle
+2. Use __init__.py for package initialization
+3. Keep modules focused and cohesive
+4. Use abstract base classes for common interfaces
+5. Implement proper namespace management
+
+## Interface Design
+1. Design clear and consistent APIs
+2. Use type hints for better code clarity
+3. Implement proper error handling
+4. Document public interfaces with docstrings
+5. Follow Python naming conventions
+
+## Error Handling
+1. Use specific exception classes
+2. Implement proper error logging
+3. Provide meaningful error messages
+4. Use context managers for resource cleanup
+5. Implement retry mechanisms where appropriate
+
+## Performance Optimization
+1. Use profiling tools to identify bottlenecks
+2. Implement caching where appropriate
+3. Use generators for large datasets
+4. Optimize database queries
+5. Consider asynchronous programming for I/O bound tasks
+
+## Extensibility
+1. Use plugin architecture where applicable
+2. Implement configuration management
+3. Use dependency injection for better testability
+4. Design for future feature additions
+5. Maintain backward compatibility
+
+## Documentation
+1. Write comprehensive docstrings
+2. Maintain up-to-date README
+3. Use Sphinx for API documentation
+4. Include usage examples
+5. Document design decisions
+
+## Testing Strategy
+1. Implement unit tests for core functionality
+2. Use integration tests for system components
+3. Implement end-to-end tests for critical paths
+4. Use mocking for external dependencies
+5. Maintain high test coverage
+
+# Lessons
+
+## User Specified Lessons
+- You have a high-frequency quantitative trading framework aioquant module, in .venv/Lib/site-packages/aioquant.
+- Include info useful for debugging in the program output.
+- Read the file before you try to edit it.
+- Use LLM to perform flexible text understanding tasks. First test on a few files. After success, make it parallel.
+
+## Line learned
+- For website image paths, always use the correct relative path (e.g., 'images/filename.png') and ensure the images directory exists
+- For search results, ensure proper handling of different character encodings (UTF-8) for international queries
+- Add debug information to stderr while keeping the main output clean in stdout for better pipeline integration
+- When using seaborn styles in matplotlib, use 'seaborn-v0_8' instead of 'seaborn' as the style name due to recent seaborn version changes
+
+# Scratchpad
